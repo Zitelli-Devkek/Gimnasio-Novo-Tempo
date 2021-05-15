@@ -257,12 +257,13 @@ header .able_to_open_menu.active span:nth-child(2) {
 .service .content .box {
   flex: 0 0 50%;
   max-width: 50%;
+  padding: 15px;
 }
 .service .content .text h2 {
   font-size: 30px;
   font-weight: 500;
   color: #ffffff;
-  padding: 0px 0px 30px;
+  padding: 0px 0px 20px;
 }
 .service .content .text p {
   letter-spacing: 1px;
@@ -276,7 +277,7 @@ header .able_to_open_menu.active span:nth-child(2) {
 }
 .service .content .text .btn {
   padding: 8px 30px;
-  background-color: #000000;
+  background-color: #222222;
   color: #ffffff;
   text-decoration: none;
   display: inline-block;
@@ -289,4 +290,106 @@ header .able_to_open_menu.active span:nth-child(2) {
   border: 1px solid #fff;
   background-color: transparent;
 }
+.service .content .accordian-container {
+  margin-bottom: 5px;
+}
+.service .content .accordian-container .head {
+  background-color: rgba(0, 0, 0, 0.2);
+  position: relative;
+  padding: 12px 15px;
+  cursor: pointer;
+}
+.service .content .accordian-container .head .fa {
+  position: absolute;
+  right: 10px;
+  top: 13px;
+  color: #ffffff;
+  height: 30px;
+  width: 30px;
+  text-align: center;
+  display: inline-block;
+  line-height: 30px;
+  color: #ffffff;
+  border-radius: 50%;
+}
+.service .content .accordian-container .head h4 {
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+  color: #ffffff;
+  text-transform: capitalize;
+}
+.service .content .accordian-container.active .head {
+  background-color: #222222;
+}
+.service .content .accordian-container .body {
+  display: none;
+  padding: 15px;
+  background-color: #222222;
+  border-top: 1px solid #333333;
+}
+.service .content .accordian-container:nth-child(1) .body {
+  display: block;
+}
+.service .content .accordian-container .body p {
+  letter-spacing: 1px;
+  font-size: 15px;
+  line-height: 20px;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  font-weight: 300;
+  /*font-family: "Open Sans", sans-serif;*/
+}
 /*fin SERVICIOS  */
+/* ------------------COMIENZO CLASES---------------------------*/
+.classes {
+  padding: 80px 0px;
+  background-color: #ffffff;
+}
+.classes .content {
+  -webkit-display: flex;
+  display: flex;
+}
+.classes .content .box {
+  padding: 15px;
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+.classes .content .img {
+  width: 100%;
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+.classes .content .text p {
+  font-size: 15px;
+  line-height: 20px;
+  color: #222222;
+  margin: 0;
+  padding: 0 0 30px;
+  /*font-family: "Open Sans", sans-serif*/
+}
+
+.classes .content .class-items .item {
+  margin-bottom: 30px;
+  display: flex;
+}
+
+.classes .content .class-items .item:nth-child(1) {
+  background-color: #222222;
+}
+
+.classes .content .class-items .item:nth-child(2) {
+  background-color: #00e1ff;
+}
+
+.classes .content .class-items .item .item-text,
+.classes .content .class-items .item .item-img {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.classes .content .class-items .item .item-img img {
+  width: 100%;
+}
