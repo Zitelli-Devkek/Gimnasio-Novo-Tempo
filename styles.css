@@ -200,8 +200,9 @@ header .able_to_open_menu.active span:nth-child(2) {
 }
 /* FIN HEADER*/
 /* Comiendo Acerca de Nosotros o ADN */
+
 .adn {
-  padding: 80px 15px;
+  padding: 80px 0px;
   background-color: #ffffff;
 }
 .adn .content {
@@ -222,20 +223,20 @@ header .able_to_open_menu.active span:nth-child(2) {
 .adn .content .box .inner .img img {
   width: 100%;
 }
+
 .adn .content .box .inner .text {
   padding: 30px;
 }
 .adn .content .box .inner .text h4 {
-  font-size: 18px;
+  font-size: 20px;
   margin: 0;
   padding: 0px 0px 15px;
   font-weight: 500;
   color: #ffffff;
-  text-align: center;
   text-transform: capitalize;
+  text-align: center;
 }
 .adn .content .box .inner .text p {
-  letter-spacing: 1px;
   font-size: 15px;
   line-height: 20px;
   color: #ffffff;
@@ -244,6 +245,7 @@ header .able_to_open_menu.active span:nth-child(2) {
   font-weight: 300;
   /*font-family: "Open Sans", sans-serif;*/
 }
+
 /* fin ADN */
 /* comienzo SERVICIOS */
 .service {
@@ -345,7 +347,7 @@ header .able_to_open_menu.active span:nth-child(2) {
 /*fin SERVICIOS  */
 /* ------------------COMIENZO CLASES---------------------------*/
 .classes {
-  padding: 80px 0px;
+  padding: 80px 0px 50px;
   background-color: #ffffff;
 }
 .classes .content {
@@ -384,12 +386,66 @@ header .able_to_open_menu.active span:nth-child(2) {
   background-color: #00e1ff;
 }
 
+.classes .content .class-items .item .item-text {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .classes .content .class-items .item .item-text,
 .classes .content .class-items .item .item-img {
   flex: 0 0 50%;
   max-width: 50%;
+  position: relative;
 }
-
 .classes .content .class-items .item .item-img img {
   width: 100%;
+  display: block;
+}
+.classes .content .class-items .item .item-img .price {
+  position: absolute;
+  height: 50px;
+  width: 60px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #ffffff;
+  text-align: center;
+  line-height: 50px;
+}
+.classes .content .class-items .item:nth-child(1) .item-img .price {
+  background-color: #00e1ff;
+  left: 0;
+  top: 0;
+}
+.classes .content .class-items .item:nth-child(2) .item-img .price {
+  background-color: #222222;
+  right: 0;
+  top: 0;
+}
+.classes .content .class-items .item .item-text h4 {
+  font-size: 20px;
+  margin: 0;
+  padding: 0px 0px 15px;
+  font-weight: 500;
+  color: #ffffff;
+  text-transform: capitalize;
+  text-align: left;
+}
+.classes .content .class-items .item .item-text p {
+  font-size: 15px;
+  margin: 0;
+  line-height: 20px;
+  color: #ffffff;
+  text-align: left;
+  padding: 0 0 20px;
+  /*font-family: "Open Sans", sans-serif*/
+}
+.classes .content .class-items .item .item-text a {
+  font-size: 16px;
+  text-decoration: none;
+  display: inline-block;
+}
+.classes .content .class-items .item .item-text a {
+  color: #ffffff;
 }
