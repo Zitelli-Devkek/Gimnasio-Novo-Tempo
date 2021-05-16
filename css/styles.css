@@ -13,6 +13,7 @@ html {
 body {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 .container {
@@ -23,7 +24,7 @@ body {
 /*INICIO O HOME */
 .inicio {
   height: 100vh;
-  background-image: url("./images/home.jpg");
+  background-image: url("../images/home.jpg");
   background-size: cover;
   padding: 15px;
   -webkit-display: flex;
@@ -95,12 +96,13 @@ body {
 /*FIN DEL INICIO O HOME */
 /* HEADER*/
 header {
-  position: absolute;
+  position: fixed;
   left: 0px;
   top: 0px;
   width: 100%;
   z-index: 10;
-  padding: 30px 30px;
+  background-color: #000000;
+  padding: 20px 15px;
 }
 
 header .container {
@@ -145,6 +147,19 @@ header .nav ul li a {
   display: block;
   position: relative;
   padding: 10px 30px;
+}
+header .nav ul li a.active::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  background-color: #000000;
+  opacity: 0.2;
+  -webkit-transition: width 0.5s ease;
+  transition: width 0.5s ease;
+  z-index: -1;
 }
 header .nav ul li a::before {
   content: "";
@@ -567,4 +582,350 @@ header .able_to_open_menu.active span:nth-child(2) {
 .schedule .content .timing .table tr td.day {
   color: #ffffff;
   border-color: transparent;
+}
+
+/*COMIENZO section GALERÍA (CONSEGUIR FOTOS XD) */
+.gallery .content {
+  -webkit-display: flex;
+  display: flex;
+  flex-wrap: wrap;
+}
+.gallery .content .box {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.gallery .content .box img {
+  display: block;
+  width: 100%;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.gallery .content .box img:hover {
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);
+}
+
+.gallery h2 {
+  font-size: 30px;
+  font-weight: 500;
+  color: #000000;
+  padding: 0px 0px 20px;
+  text-align: center;
+}
+
+/* COMIENZO section PRECIOS */
+
+.price-package {
+  padding: 80px 0px;
+  background-color: #ffffff;
+}
+
+.price-package h2 {
+  font-size: 30px;
+  font-weight: 500;
+  color: #000000;
+  padding: 0px 0px 20px;
+  text-align: center;
+}
+
+.price-package .title-p {
+  font-size: 15px;
+  line-height: 20px;
+  color: #222222;
+  text-align: center;
+  margin: 0;
+  padding: 0 20% 50px;
+  /*font-family: "Open Sans", sans-serif;*/
+}
+
+.price-package .content {
+  -webkit-display: flex;
+  display: flex;
+}
+
+.price-package .content .box {
+  flex: 0 0 33.33%;
+  max-width: 33.33%;
+  padding: 15px;
+}
+.price-package .content .box .inner {
+  background-color: #f0f0f0;
+}
+
+.price-package .content .box .inner .price-tag {
+  padding: 15px;
+  font-size: 20px;
+  background-color: #00e1ff;
+  color: #ffffff;
+  text-align: center;
+  font-weight: 700;
+}
+.price-package .content .box .inner .text {
+  padding: 30px 15px;
+  text-align: center;
+}
+
+.price-package .content .box .inner .text h3 {
+  font-size: 24px;
+  color: #222222;
+  margin: 0;
+  padding: 0px 0px 20px;
+  font-weight: 700;
+}
+
+.price-package .content .box .inner .text p {
+  font-size: 15px;
+  line-height: 20px;
+  color: #222222;
+  text-align: center;
+  margin: 0;
+  padding: 0 0 5px;
+  /*font-family: "Open Sans", sans-serif;*/
+}
+
+.price-package .content .box .inner .text .btn {
+  padding: 8px 30px;
+  background-color: #00e1ff;
+  color: #ffffff;
+  text-decoration: none;
+  display: inline-block;
+  border: 1px solid transparent;
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  margin-top: 15px;
+}
+.price-package .content .box .inner .text .btn:hover {
+  border-color: #222222;
+  color: #222222;
+  background-color: transparent;
+}
+
+.price-package .content .box .inner .img img {
+  width: 100%;
+}
+
+/* COMIENZO section CONTACTO */
+.contact {
+  padding: 80px 0px;
+  background-color: #222222;
+}
+.contact .content {
+  -webkit-display: flex;
+  display: flex;
+}
+
+.contact .content .box {
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding: 15px;
+}
+
+.contact .content .form input,
+.contact .content .form textarea {
+  height: 45px;
+  width: 100%;
+  padding: 6px 12px;
+  margin-bottom: 25px;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  /*font-family: "Open-sans", sans-serif */
+  color: #ffffff;
+}
+.contact .content .form input:focus,
+.contact .content .form textarea:focus {
+  outline: none;
+}
+
+.contact .content .form input::placeholder,
+.contact .content .form textarea::placeholder {
+  color: #ffffff;
+}
+
+.contact .content .form textarea {
+  height: 100px;
+}
+
+.contact .content .form button {
+  border: none;
+  outline: none;
+  box-shadow: none;
+  height: 45px;
+  padding: 0px 50px;
+  background-color: #00e1ff;
+  color: #ffffff;
+  font-size: 15px;
+  border: 1px solid transparent;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+.contact .content .form button:hover {
+  background-color: transparent;
+  color: #ffffff;
+  border-color: #ffffff;
+}
+.contact .content .text h2 {
+  font-size: 30px;
+  font-weight: 500;
+  color: #00e1ff;
+  padding: 0px 0px 20px;
+}
+.contact .content .text p {
+  font-size: 15px;
+  line-height: 20px;
+  color: #ffffff;
+  margin: 0;
+  padding: 0px 0px 30px;
+  /*font-family: "Open-sans", sans-serif */
+}
+.contact .content .text .info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.contact .content .text .info li {
+  display: block;
+  margin-bottom: 15px;
+  color: #ffffff;
+  font-size: 15px;
+  letter-spacing: 1px;
+  position: relative;
+  padding-left: 40px;
+  /*font-family: "Open-sans", sans-serif */
+}
+.contact .content .text .info li span {
+  display: inline-block;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  font-size: 20px;
+  color: #00e1ff;
+}
+.contact .content .text .social {
+  padding-top: 30px;
+}
+.contact .content .text .social a {
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  text-align: center;
+  background-color: #00e1ff;
+  text-decoration: none;
+  display: inline-block;
+  margin-right: 10px;
+  transition: all 0.5s ease;
+  border: 1px solid transparent;
+}
+.contact .content .text .social a:hover {
+  background-color: transparent;
+  border-color: #ffffff;
+}
+.contact .content .text .social a span {
+  color: #ffffff;
+  font-size: 20px;
+}
+.contact .content .text .copy {
+  color: #c5c5c5;
+  border-top: 1px solid #333333;
+  margin-top: 30px;
+  padding-top: 20px;
+  font-size: 15px;
+}
+
+/*Responsive*/
+
+/*if screen width is less than or equal to 991px then*/
+@media (max-width: 991px) {
+  .inicio {
+    background-position: center;
+  }
+  .classes .content {
+    flex-wrap: wrap;
+  }
+  .classes .content .box {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .classes .content .img {
+    display: none;
+  }
+  .start-today .content .box {
+    padding: 15px;
+  }
+}
+
+/* si el width del screen es menor o igual a 767px entonces*/
+@media (max-width: 767px) {
+  .inicio h1 {
+    font-size: 40px;
+  }
+  .adn .content {
+    flex-wrap: wrap;
+  }
+  .adn .content .box {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .service .content {
+    flex-wrap: wrap;
+  }
+  .service .content .box {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .classes .content .class-items .item {
+    flex-wrap: wrap;
+  }
+  .classes .content .class-items .item .item-text,
+  .classes .content .class-items .item .item-img {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .schedule .content {
+    flex-wrap: wrap;
+  }
+  .schedule .content .box {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .start-today .content {
+    flex-wrap: wrap;
+  }
+  .start-today .content .box {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .gallery .content {
+    flex-wrap: wrap;
+  }
+  .gallery .content .box {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .price-package .content {
+    flex-wrap: wrap;
+  }
+  .price-package .content .box {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .contact .content {
+    flex-wrap: wrap;
+  }
+  .contact .content .box {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+/*si el width del screen es menor o igual a 550px entonces*/
+@media (max-width: 550px) {
+  .inicio h1 {
+    font-size: 30px;
+  }
 }

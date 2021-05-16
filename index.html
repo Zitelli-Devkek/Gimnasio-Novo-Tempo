@@ -4,7 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gimnasio Novo Tempo</title>
-    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="./css/styles.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <style>
+      .wow:first-child {
+        visibility: hidden;
+      }
+    </style>
   </head>
 
   <body>
@@ -20,37 +26,41 @@
         </a>
         <div class="nav">
           <ul>
-            <li><a href="">Inicio</a></li>
-            <li><a href="">Acerca de nosotros</a></li>
-            <li><a href="">Servicios</a></li>
-            <li><a href="">Clases</a></li>
-            <li><a href="">Horarios</a></li>
-            <li><a href="">Precio</a></li>
-            <li><a href="">Contacto</a></li>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#adn">Acerca de nosotros</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#clases">Clases</a></li>
+            <li><a href="#horarios">Horarios</a></li>
+            <li><a href="#precios">Precio</a></li>
+            <li><a href="#contacto">Contacto</a></li>
           </ul>
         </div>
       </div>
     </header>
     <!-- fin del header y comienzo del inicio, que contiene el background-->
-    <section class="inicio">
+    <section class="inicio" id="inicio">
       <div class="container">
-        <h1>Es hora de ir al <span>gimnasio</span>, vamos</h1>
-        <h2>Estamos listos para <span>entrenarte</span></h2>
+        <h1 class="wow slideInLeft" data-wow-delay="1s">
+          Es hora de ir al <span>gimnasio</span>, vamos
+        </h1>
+        <h2 class="wow slideInRight" data-wow-delay="1s">
+          Estamos listos para <span>entrenarte</span>
+        </h2>
       </div>
       <!-- scroll down-->
-      <a href="#about" class="scroll-down">
+      <a href="#adn" class="scroll-down">
         <i class="fa fa-angle-down" aria-hidden="true"></i>
       </a>
       <!-- fin scroll down-->
     </section>
     <!-- comienzo del acerca de nosotros-->
-    <section class="adn" id="about">
+    <section class="adn" id="adn">
       <div class="container">
         <div class="content">
           <div class="box wow bounceInUp">
             <div class="inner">
               <div class="img">
-                <img src="images/about1.jpg" alt="about" />
+                <img src="images/about1.jpg" alt="acerca de nosotros" />
               </div>
               <div class="text">
                 <h4>Consulta Gratuita</h4>
@@ -103,10 +113,10 @@
     </section>
     <!-- fin del acerca de nosotros-->
     <!-- comienzo servicios-->
-    <section class="service">
+    <section class="service" id="servicios">
       <div class="container">
         <div class="content">
-          <div class="text box">
+          <div class="text box wow slideInLeft">
             <h2>Servicios</h2>
             <p>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi
@@ -122,7 +132,7 @@
             </p>
             <a href="" class="btn">Empieza ahora</a>
           </div>
-          <div class="accordian box">
+          <div class="accordian box wow slideInRight">
             <div class="accordian-container active">
               <div class="head">
                 <h4>Equipo Cardiovascular</h4>
@@ -185,7 +195,7 @@
     </section>
     <!-- fin servicios-->
     <!-------------- COMIENZO CLASES -------------------->
-    <section class="classes" id="classes">
+    <section class="classes" id="clases">
       <div class="container">
         <div class="content">
           <div class="box img wow slideInLeft">
@@ -236,10 +246,10 @@
     </section>
     <!-------------- FIN CLASES--------------------------->
     <!-------------- COMIENZO EMPIEZA HOY----------------------------->
-    <section class="start-today">
+    <section class="start-today" id="">
       <div class="container">
         <div class="content">
-          <div class="box text">
+          <div class="box text wow slideInLeft">
             <h2>Empieza tu entrenamiento hoy</h2>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -249,7 +259,7 @@
             </p>
             <a href="" class="btn">Empieza ahora</a>
           </div>
-          <div class="box img">
+          <div class="box img wow slideInRight">
             <img src="./images/gallery4.jpg" alt="Comienza hoy" />
           </div>
         </div>
@@ -257,10 +267,10 @@
     </section>
     <!---------------FIN EMPIEZA HOY---------------------------------->
     <!------------------COMIENZO HORARIOS---------------------->
-    <section class="schedule">
+    <section class="schedule" id="horarios">
       <div class="container">
         <div class="content">
-          <div class="box text">
+          <div class="box text wow slideInLeft">
             <h2>Horarios de Clases</h2>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde iste
@@ -268,9 +278,9 @@
               inventore, cumque suscipit non porro, eius praesentium possimus
               corrupti consectetur laboriosam.
             </p>
-            <img src="/images/schedule1.png" alt="horarios" />
+            <img src="./images/schedule1.png" alt="horarios" />
           </div>
-          <div class="box timing">
+          <div class="box timing wow slideInLeft">
             <table class="table">
               <tbody>
                 <tr>
@@ -316,13 +326,143 @@
       </div>
     </section>
     <!-------------------FIN HORARIOS----------------------->
+    <!-------------------COMIENZO GALERIA----------------------->
+    <section class="gallery" id="galeria">
+      <h2>Galería de Ejercicios</h2>
+      <div class="content">
+        <div class="box wow slideInLeft">
+          <img src="./images/gallery1.jpg" alt="galería" />
+        </div>
+        <div class="box wow slideInRight">
+          <img src="./images/gallery2.jpg" alt="galería" />
+        </div>
+        <div class="box wow slideInLeft">
+          <img src="./images/gallery3.jpg" alt="galería" />
+        </div>
+        <div class="box wow slideInRight">
+          <img src="./images/gallery4.jpg" alt="galería" />
+        </div>
+      </div>
+    </section>
+
+    <!-------------------FIN GALERIA----------------------->
+    <!-------------------COMIENZO section PRECIOS----------------------->
+    <section class="price-package" id="precios">
+      <div class="container">
+        <h2>Elige Tu Plan</h2>
+        <p class="title-p">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore
+          rerum dignissimos rem natus sapiente ut ea. Maxime eos obcaecati
+          voluptate asperiores ratione, eum, veritatis libero doloribus dicta
+          saepe modi sed!
+        </p>
+        <div class="content">
+          <div class="box wow bounceInUp">
+            <div class="inner">
+              <div class="price-tag">$2000/Mes</div>
+              <div class="img">
+                <img src="./images/price1.jpg" alt="precios" />
+              </div>
+              <div class="text">
+                <h3>Entrenamiento de Musculación</h3>
+                <p>Get Free WiFi</p>
+                <p>Month to Month</p>
+                <p>No Time Restrictions</p>
+                <p>Gym and Cardio</p>
+                <p>Service Locker Rooms</p>
+                <a href="" class="btn">Join Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="box wow bounceInUp" data-wow-delay="0.2s">
+            <div class="inner">
+              <div class="price-tag">$2500/Mes</div>
+              <div class="img">
+                <img src="./images/price2.jpg" alt="precios" />
+              </div>
+              <div class="text">
+                <h3>Entrenamiento de Musculación</h3>
+                <p>Get Free WiFi</p>
+                <p>Month to Month</p>
+                <p>No Time Restrictions</p>
+                <p>Gym and Cardio</p>
+                <p>Service Locker Rooms</p>
+                <a href="" class="btn">Join Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="box wow bounceInUp" data-wow-delay="0.4s"">
+            <div class="inner">
+              <div class="price-tag">$2900/Mes</div>
+              <div class="img">
+                <img src="./images/price3.jpg" alt="precios" />
+              </div>
+              <div class="text">
+                <h3>Entrenamiento de Musculación</h3>
+                <p>Get Free WiFi</p>
+                <p>Month to Month</p>
+                <p>No Time Restrictions</p>
+                <p>Gym and Cardio</p>
+                <p>Service Locker Rooms</p>
+                <a href="" class="btn">Join Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-------------------FIN PRECIOS----------------------->
+    <!-------------------COMIENZO CONTACTO----------------------->
+    <section class="contact" id="contacto">
+      <div class="container">
+        <div class="content">
+          <div class="box form wow slideInLeft">
+            <form>
+              <input type="text" placeholder="Enter Name" />
+              <input type="text" placeholder="Enter Email" />
+              <input type="text" placeholder="Enter Mobile" />
+              <textarea placeholder="Enter Message"></textarea>
+              <button type="submit">Send Message</button>
+            </form>
+          </div>
+          <div class="box text wow slideInRight">
+            <h2>Get Connected with Gym</h2>
+            <p class="title-p">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s.
+            </p>
+            <div class="info">
+              <ul>
+                <li>
+                  <span class="fa fa-map-marker"></span> Gali no 11, House no
+                  11, New Delhi
+                </li>
+                <li><span class="fa fa-phone"></span> 91 9999999999</li>
+                <li><span class="fa fa-envelope"></span> info@gym.com</li>
+              </ul>
+            </div>
+            <div class="social">
+              <a href=""><span class="fa fa-facebook"></span></a>
+              <a href=""><span class="fa fa-linkedin"></span></a>
+              <a href=""><span class="fa fa-skype"></span></a>
+              <a href=""><span class="fa fa-youtube-play"></span></a>
+            </div>
+
+            <div class="copy">PowerBy &copy; Zitelli-Devkek</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-------------------FIN CONTACTO----------------------->
     <!-- Jquery script-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
       $(document).ready(function () {
-        $(".able_to_open_menu").click(function () {
+        $(".able_to_open_menu, .nav ul li a").click(function () {
           $(".nav").toggleClass("open");
-          $(this).toggleClass("active");
+          $(".able_to_open_menu").toggleClass("active");
         });
         $(".accordian-container").click(function () {
           $(".accordian-container").children(".body").slideUp();
@@ -340,7 +480,35 @@
             .removeClass("fa-angle-up")
             .addClass("fa-angle-down");
         });
+        //$(".nav ul li a, .go-down").click(function (event) {
+        //if (this.hash !== "") {
+        //event.preventDefault();
+
+        //var hash = this.hash;
+
+        //$("html,body").animate(
+        //{
+        // scrollTop: $(hash).offset().top,
+        //},
+        //800,
+        //function () {
+        //window.location.hash = hash;
       });
+
+      // add active class in navigation
+      //$(".nav ul li a").removeClass("active");
+      //$(this).addClass("active");
+      //}
+      //});
+      //});
+    </script>
+    <script src="./js/wow.min.js"></script>
+    <script>
+      wow = new WOW({
+        animateClass: "animated",
+        offset: 0,
+      });
+      wow.init();
     </script>
   </body>
 </html>
